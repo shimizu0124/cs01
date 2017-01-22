@@ -1,3 +1,10 @@
 c:\users\siori\documents\visual studio 2015\Projects\calculator\bin\Debug\calculator.exe.config
 C:\Users\siori\Desktop\projects\calculator\bin\Debug\calculator.exe.config
 C:\Users\siori\Desktop\projects\cs01\calculator\bin\Debug\calculator.exe.config
+C:\Users\siori\Desktop\projects\cs01\calculator\bin\Debug\calculator.exe
+C:\Users\siori\Desktop\projects\cs01\calculator\bin\Debug\calculator.pdb
+C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.CalcForm.resources
+C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.Properties.Resources.resources
+C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.csproj.GenerateResource.Cache
+C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.exe
+C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.pdb
