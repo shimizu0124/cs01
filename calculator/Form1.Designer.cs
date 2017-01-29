@@ -46,6 +46,7 @@
             this.BtnPoint = new System.Windows.Forms.Button();
             this.BtnClear = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
+            this.kigouBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Btn0
@@ -220,17 +221,26 @@
             // 
             // textBox
             // 
-            this.textBox.Location = new System.Drawing.Point(36, 38);
+            this.textBox.Location = new System.Drawing.Point(87, 36);
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(261, 19);
+            this.textBox.Size = new System.Drawing.Size(210, 19);
             this.textBox.TabIndex = 18;
             this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            // 
+            // kigouBox
+            // 
+            this.kigouBox.Location = new System.Drawing.Point(36, 36);
+            this.kigouBox.Name = "kigouBox";
+            this.kigouBox.Size = new System.Drawing.Size(45, 19);
+            this.kigouBox.TabIndex = 19;
+            this.kigouBox.TextChanged += new System.EventHandler(this.kigouBox_TextChanged);
             // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 427);
+            this.Controls.Add(this.kigouBox);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.BtnPoint);
@@ -277,6 +287,7 @@
         private System.Windows.Forms.Button BtnPoint;
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.TextBox kigouBox;
     }
 }
 

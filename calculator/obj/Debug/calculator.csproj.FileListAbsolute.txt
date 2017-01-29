@@ -8,3 +8,4 @@ C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.Properties.
 C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.csproj.GenerateResource.Cache
 C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.exe
 C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.pdb
+C:\Users\siori\Desktop\projects\cs01\calculator\obj\Debug\calculator.csprojResolveAssemblyReference.cache
