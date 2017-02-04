@@ -31,315 +31,78 @@ namespace calculator
 
         private void Btn0_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "0";
-                }
-                else
-                {
-                    textBox.Text += "0";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "0";
-                }
-                else
-                {
-                    textBox.Text += "0";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 0;
+            execBtnNum(x);
         }
 
         private void Btn1_Click(object sender, EventArgs e)
         {
-
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "1";
-                }
-                else
-                {
-                    textBox.Text += "1";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "1";
-                }
-                else
-                {
-                    textBox.Text += "1";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 1;
+            execBtnNum(x);
         }
 
         private void Btn2_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "2";
-                }
-                else
-                {
-                    textBox.Text += "2";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "2";
-                }
-                else
-                {
-                    textBox.Text += "2";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 2;
+            execBtnNum(x);
         }
 
         private void Btn3_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "3";
-                }
-                else
-                {
-                    textBox.Text += "3";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "3";
-                }
-                else
-                {
-                    textBox.Text += "3";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 3;
+            execBtnNum(x);
         }
 
         private void Btn4_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "4";
-                }
-                else
-                {
-                    textBox.Text += "4";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "4";
-                }
-                else
-                {
-                    textBox.Text += "4";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 4;
+            execBtnNum(x);
         }
 
         private void Btn5_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "5";
-                }
-                else
-                {
-                    textBox.Text += "5";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "5";
-                }
-                else
-                {
-                    textBox.Text += "5";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 5;
+            execBtnNum(x);
         }
 
         private void Btn6_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "6";
-                }
-                else
-                {
-                    textBox.Text += "6";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "6";
-                }
-                else
-                {
-                    textBox.Text += "6";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 6;
+            execBtnNum(x);
         }
 
         private void Btn7_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "7";
-                }
-                else
-                {
-                    textBox.Text += "7";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "7";
-                }
-                else
-                {
-                    textBox.Text += "7";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 7;
+            execBtnNum(x);
         }
 
         private void Btn8_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "8";
-                }
-                else
-                {
-                    textBox.Text += "8";
-                }
-            }
-            //2回目以降
-            else
-            {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "8";
-                }
-                else
-                {
-                    textBox.Text += "8";
-                }
-            }
-
-            opeFlg = true;
-
+            int x = 8;
+            execBtnNum(x);
         }
 
         private void Btn9_Click(object sender, EventArgs e)
         {
+            int x = 9;
+            execBtnNum(x);
+        }
+
+        //数字ボタン押下後の共通処理
+        private void execBtnNum(int x)
+        {
             //1回目
             if (kigouBox.Text == "")
             {
                 if (opeFlg == false)
                 {
                     calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "9";
+                    textBox.Text = x.ToString();
                 }
                 else
                 {
-                    textBox.Text += "9";
+                    textBox.Text += x.ToString();
                 }
             }
             //2回目以降
@@ -348,167 +111,68 @@ namespace calculator
                 if (opeFlg == false)
                 {
                     calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = "9";
+                    textBox.Text = x.ToString();
                 }
                 else
                 {
-                    textBox.Text += "9";
+                    textBox.Text += x.ToString();
                 }
             }
 
             opeFlg = true;
-
         }
 
         private void BtnDiv_Click(object sender, EventArgs e)
         {
-            switch (kigouBox.Text)
-            {
-                case "÷":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum / Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "×":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum * Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "-":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum - Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "+":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum + Num;
-                    textBox.Text = result.ToString();
-                    break;
-                default:
-                    break;
-            }
-            opeFlg = false;
+            execBtnKigou();
             kigouBox.Text = "÷";
 
         }
 
         private void BtnMul_Click(object sender, EventArgs e)
         {
-            switch (kigouBox.Text)
-            {
-                case "÷":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum / Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "×":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum * Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "-":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum - Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "+":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum + Num;
-                    textBox.Text = result.ToString();
-                    break;
-                default:
-                    break;
-            }
-            opeFlg = false;
+            execBtnKigou();
             kigouBox.Text = "×";
-
         }
 
         private void BtnSub_Click(object sender, EventArgs e)
         {
-            switch (kigouBox.Text)
-            {
-                case "÷":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum / Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "×":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum * Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "-":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum - Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "+":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum + Num;
-                    textBox.Text = result.ToString();
-                    break;
-                default:
-                    break;
-            }
-            opeFlg = false;
+            execBtnKigou();
             kigouBox.Text = "-";
-
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            switch (kigouBox.Text)
-            {
-                case "÷":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum / Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "×":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum * Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "-":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum - Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "+":
-                    Num = Double.Parse(textBox.Text);
-                    result = calcNum + Num;
-                    textBox.Text = result.ToString();
-                    break;
-                default:
-                    break;
-            }
-            opeFlg = false;
+            execBtnKigou();
             kigouBox.Text = "+";
-
         }
 
         private void BtnCalc_Click(object sender, EventArgs e)
         {
+            execBtnKigou();
+            kigouBox.Text = string.Empty;
+        }
+
+        //記号ボタン押下後の共通処理
+        private void execBtnKigou()
+        {
+            Num = Double.Parse(textBox.Text);
+
             switch (kigouBox.Text)
             {
                 case "÷":
-                    Num = Double.Parse(textBox.Text);
                     result = calcNum / Num;
                     textBox.Text = result.ToString();
                     break;
                 case "×":
-                    Num = Double.Parse(textBox.Text);
                     result = calcNum * Num;
                     textBox.Text = result.ToString();
                     break;
                 case "-":
-                    Num = Double.Parse(textBox.Text);
                     result = calcNum - Num;
                     textBox.Text = result.ToString();
                     break;
                 case "+":
-                    Num = Double.Parse(textBox.Text);
                     result = calcNum + Num;
                     textBox.Text = result.ToString();
                     break;
@@ -517,7 +181,6 @@ namespace calculator
             }
 
             opeFlg = false;
-            kigouBox.Text = string.Empty;
 
         }
 
