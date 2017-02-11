@@ -222,10 +222,10 @@
             // textBox
             // 
             this.textBox.Location = new System.Drawing.Point(87, 36);
+            this.textBox.MaxLength = 10;
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(210, 19);
             this.textBox.TabIndex = 18;
-            this.textBox.TextChanged += new System.EventHandler(this.textBox_TextChanged);
             // 
             // kigouBox
             // 
@@ -233,7 +233,6 @@
             this.kigouBox.Name = "kigouBox";
             this.kigouBox.Size = new System.Drawing.Size(45, 19);
             this.kigouBox.TabIndex = 19;
-            this.kigouBox.TextChanged += new System.EventHandler(this.kigouBox_TextChanged);
             // 
             // CalcForm
             // 

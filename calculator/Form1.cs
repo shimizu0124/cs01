@@ -28,132 +28,234 @@ namespace calculator
         {
             textBox.Text = "0";
         }
-
+        
+        /// <summary>
+        /// [0]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn0_Click(object sender, EventArgs e)
         {
             int x = 0;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [1]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn1_Click(object sender, EventArgs e)
         {
             int x = 1;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [2]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn2_Click(object sender, EventArgs e)
         {
             int x = 2;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [3]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn3_Click(object sender, EventArgs e)
         {
             int x = 3;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [4]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn4_Click(object sender, EventArgs e)
         {
             int x = 4;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [5]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn5_Click(object sender, EventArgs e)
         {
             int x = 5;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [6]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn6_Click(object sender, EventArgs e)
         {
             int x = 6;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [7]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn7_Click(object sender, EventArgs e)
         {
             int x = 7;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [8]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn8_Click(object sender, EventArgs e)
         {
             int x = 8;
             execBtnNum(x);
         }
 
+        /// <summary>
+        /// [9]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn9_Click(object sender, EventArgs e)
         {
             int x = 9;
             execBtnNum(x);
         }
 
-        //数字ボタン押下後の共通処理
-        private void execBtnNum(int x)
+        /// <summary>
+        /// [.]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnPoint_Click(object sender, EventArgs e)
         {
-            //1回目
-            if (kigouBox.Text == "")
+            //1回目or記号入力後
+            if (opeFlg == false)
             {
-                if (opeFlg == false)
-                {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = x.ToString();
-                }
-                else
-                {
-                    textBox.Text += x.ToString();
-                }
+                calcNum = Double.Parse(textBox.Text);
+                textBox.Text = "0.";
+                opeFlg = true;
             }
-            //2回目以降
+
+            //数字入力後
             else
             {
-                if (opeFlg == false)
+                if (0 >= textBox.Text.IndexOf("."))
                 {
-                    calcNum = Double.Parse(textBox.Text);
-                    textBox.Text = x.ToString();
-                }
-                else
-                {
-                    textBox.Text += x.ToString();
+                    if (textBox.Text.Length < 10)
+                    {
+                        textBox.Text += ".";
+                    }
                 }
             }
 
-            opeFlg = true;
         }
 
+        /// <summary>
+        /// 数字ボタン押下後の共通処理
+        /// </summary>
+        /// <param name="x"></param>
+        private void execBtnNum(int x)
+        {
+            //1回目or記号入力後
+            if (opeFlg == false)
+            {
+                calcNum = Double.Parse(textBox.Text);
+                textBox.Text = x.ToString();
+                opeFlg = true;
+            }
+
+            //数字入力後
+            else
+            {
+                if (textBox.Text == "0")
+                {
+                    textBox.Text = x.ToString();
+                }
+                else if (textBox.Text.Length < 10) 
+                {
+                    textBox.Text += x.ToString();
+                }   
+            }  
+                    
+        }
+
+
+        /// <summary>
+        /// [÷]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnDiv_Click(object sender, EventArgs e)
         {
             execBtnKigou();
             kigouBox.Text = "÷";
-
         }
 
+        /// <summary>
+        /// [×]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnMul_Click(object sender, EventArgs e)
         {
             execBtnKigou();
             kigouBox.Text = "×";
         }
 
+        /// <summary>
+        /// [-]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnSub_Click(object sender, EventArgs e)
         {
             execBtnKigou();
             kigouBox.Text = "-";
         }
 
+        /// <summary>
+        /// [+]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             execBtnKigou();
             kigouBox.Text = "+";
         }
 
+        /// <summary>
+        /// [=]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCalc_Click(object sender, EventArgs e)
         {
             execBtnKigou();
             kigouBox.Text = string.Empty;
         }
 
-        //記号ボタン押下後の共通処理
+        /// <summary>
+        /// 記号ボタン押下後の共通処理
+        /// </summary>
         private void execBtnKigou()
         {
             Num = Double.Parse(textBox.Text);
@@ -184,26 +286,18 @@ namespace calculator
 
         }
 
+        /// <summary>
+        /// [C]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClear_Click(object sender, EventArgs e)
         {
             opeFlg = false;
             textBox.Text = "0";
             kigouBox.Text = string.Empty;
         }
-
-        private void BtnPoint_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kigouBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+         
+               
     }
 }
