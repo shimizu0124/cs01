@@ -149,9 +149,8 @@ namespace calculator
             //1回目or記号入力後
             if (opeFlg == false)
             {
-                calcNum = Double.Parse(textBox.Text);
+                storeCalcNum();
                 textBox.Text = "0.";
-                opeFlg = true;
             }
 
             //数字入力後
@@ -177,9 +176,8 @@ namespace calculator
             //1回目or記号入力後
             if (opeFlg == false)
             {
-                calcNum = Double.Parse(textBox.Text);
+                storeCalcNum();
                 textBox.Text = x.ToString();
-                opeFlg = true;
             }
 
             //数字入力後
@@ -195,6 +193,15 @@ namespace calculator
                 }   
             }  
                     
+        }
+
+        /// <summary>
+        /// 計算の対象となる前者の数字を保存
+        /// </summary>
+        private void storeCalcNum()
+        {
+            calcNum = Double.Parse(textBox.Text);
+            opeFlg = true;
         }
 
 
@@ -258,31 +265,34 @@ namespace calculator
         /// </summary>
         private void execBtnKigou()
         {
-            Num = Double.Parse(textBox.Text);
-
-            switch (kigouBox.Text)
+            if (opeFlg == true)
             {
-                case "÷":
-                    result = calcNum / Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "×":
-                    result = calcNum * Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "-":
-                    result = calcNum - Num;
-                    textBox.Text = result.ToString();
-                    break;
-                case "+":
-                    result = calcNum + Num;
-                    textBox.Text = result.ToString();
-                    break;
-                default:
-                    break;
-            }
+                Num = Double.Parse(textBox.Text);
 
-            opeFlg = false;
+                switch (kigouBox.Text)
+                {
+                    case "÷":
+                        result = calcNum / Num;
+                        textBox.Text = result.ToString();
+                        break;
+                    case "×":
+                        result = calcNum * Num;
+                        textBox.Text = result.ToString();
+                        break;
+                    case "-":
+                        result = calcNum - Num;
+                        textBox.Text = result.ToString();
+                        break;
+                    case "+":
+                        result = calcNum + Num;
+                        textBox.Text = result.ToString();
+                        break;
+                    default:
+                        break;
+                }
+
+                opeFlg = false;
+            }
 
         }
 
