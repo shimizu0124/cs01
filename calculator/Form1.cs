@@ -20,6 +20,7 @@ namespace calculator
         double calcNum;
         double Num;
         double result;
+        string kigou;
         bool opeFlg = false;
 
 
@@ -256,43 +257,65 @@ namespace calculator
         /// <param name="e"></param>
         private void BtnCalc_Click(object sender, EventArgs e)
         {
-            execBtnKigou();
-            kigouBox.Text = string.Empty;
+            //1回目
+            if (opeFlg == true)
+            {
+                Num = Double.Parse(textBox.Text);
+                kigou = kigouBox.Text;
+                calculation();
+                kigouBox.Text = string.Empty;
+            }
+            //連続で押下した際の処理
+            else
+            {
+                calcNum = Double.Parse(textBox.Text);
+                calculation();
+            }
+
         }
 
         /// <summary>
-        /// 記号ボタン押下後の共通処理
+        /// 記号ボタン(÷,×,-,+)押下後の共通処理
         /// </summary>
         private void execBtnKigou()
         {
             if (opeFlg == true)
             {
                 Num = Double.Parse(textBox.Text);
-
-                switch (kigouBox.Text)
-                {
-                    case "÷":
-                        result = calcNum / Num;
-                        textBox.Text = result.ToString();
-                        break;
-                    case "×":
-                        result = calcNum * Num;
-                        textBox.Text = result.ToString();
-                        break;
-                    case "-":
-                        result = calcNum - Num;
-                        textBox.Text = result.ToString();
-                        break;
-                    case "+":
-                        result = calcNum + Num;
-                        textBox.Text = result.ToString();
-                        break;
-                    default:
-                        break;
-                }
-
-                opeFlg = false;
+                kigou = kigouBox.Text;
+                calculation();  
             }
+
+        }
+
+        /// <summary>
+        /// 計算
+        /// </summary>
+        private void calculation()
+        {
+            switch (kigou)
+            {
+                case "÷":
+                    result = calcNum / Num;
+                    textBox.Text = result.ToString();
+                    break;
+                case "×":
+                    result = calcNum * Num;
+                    textBox.Text = result.ToString();
+                    break;
+                case "-":
+                    result = calcNum - Num;
+                    textBox.Text = result.ToString();
+                    break;
+                case "+":
+                    result = calcNum + Num;
+                    textBox.Text = result.ToString();
+                    break;
+                default:
+                    break;
+            }
+
+            opeFlg = false;
 
         }
 
