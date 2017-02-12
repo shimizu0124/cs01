@@ -157,12 +157,9 @@ namespace calculator
             //数字入力後
             else
             {
-                if (0 >= textBox.Text.IndexOf("."))
+                if ((0 >= textBox.Text.IndexOf(".")) & (textBox.Text.Length < 10))
                 {
-                    if (textBox.Text.Length < 10)
-                    {
                         textBox.Text += ".";
-                    }
                 }
             }
 
