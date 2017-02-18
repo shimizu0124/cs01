@@ -20,8 +20,10 @@ namespace calculator
         double calcNum;
         double Num;
         double result;
+        double memory;
         string kigou;
         bool opeFlg = false;
+        bool mFlag = false;
 
 
 
@@ -153,7 +155,13 @@ namespace calculator
                 storeCalcNum();
                 textBox.Text = "0.";
             }
-
+            //memoryBtnの押下直後
+            else if (opeFlg == true & mFlag == true)
+            {
+                storeCalcNum();
+                textBox.Text = "0.";
+                mFlag = false;
+            }
             //数字入力後
             else
             {
@@ -177,7 +185,13 @@ namespace calculator
                 storeCalcNum();
                 textBox.Text = x.ToString();
             }
-
+            //memoryBtnの押下直後
+            else if (opeFlg == true & mFlag == true)
+            {
+                storeCalcNum();
+                textBox.Text = x.ToString();
+                mFlag = false;
+            }
             //数字入力後
             else
             {
@@ -313,6 +327,7 @@ namespace calculator
             }
 
             opeFlg = false;
+            mFlag = false;
 
         }
 
@@ -327,7 +342,56 @@ namespace calculator
             textBox.Text = "0";
             kigouBox.Text = string.Empty;
         }
-         
-               
+
+        /// <summary>
+        /// [MR]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMR_Click(object sender, EventArgs e)
+        {
+            if(memoryBox.Text == "M")
+            {
+                storeCalcNum();
+                textBox.Text = memory.ToString();
+                mFlag = true;
+            }
+        }
+
+        /// <summary>
+        /// [M+]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMadd_Click(object sender, EventArgs e)
+        {
+            memoryBox.Text = "M";
+            memory += Double.Parse(textBox.Text);
+            mFlag = true;
+        }
+
+        /// <summary>
+        /// [M-]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMsub_Click(object sender, EventArgs e)
+        {
+            memoryBox.Text = "M";
+            memory -= Double.Parse(textBox.Text);
+            mFlag = true;
+        }
+
+        /// <summary>
+        /// [MC]ボタンクリック時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMC_Click(object sender, EventArgs e)
+        {
+            memoryBox.Text = string.Empty;
+            memory = 0;
+            mFlag = true;
+        }
     }
 }

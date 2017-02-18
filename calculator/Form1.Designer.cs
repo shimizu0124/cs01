@@ -47,6 +47,11 @@
             this.BtnClear = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.kigouBox = new System.Windows.Forms.TextBox();
+            this.BtnMR = new System.Windows.Forms.Button();
+            this.BtnMadd = new System.Windows.Forms.Button();
+            this.BtnMsub = new System.Windows.Forms.Button();
+            this.BtnMC = new System.Windows.Forms.Button();
+            this.memoryBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Btn0
@@ -211,9 +216,9 @@
             // 
             // BtnClear
             // 
-            this.BtnClear.Location = new System.Drawing.Point(36, 88);
+            this.BtnClear.Location = new System.Drawing.Point(36, 109);
             this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(60, 60);
+            this.BtnClear.Size = new System.Drawing.Size(45, 39);
             this.BtnClear.TabIndex = 17;
             this.BtnClear.Text = "C";
             this.BtnClear.UseVisualStyleBackColor = true;
@@ -234,11 +239,63 @@
             this.kigouBox.Size = new System.Drawing.Size(45, 19);
             this.kigouBox.TabIndex = 19;
             // 
+            // BtnMR
+            // 
+            this.BtnMR.Location = new System.Drawing.Point(88, 109);
+            this.BtnMR.Name = "BtnMR";
+            this.BtnMR.Size = new System.Drawing.Size(46, 39);
+            this.BtnMR.TabIndex = 20;
+            this.BtnMR.Text = "MR";
+            this.BtnMR.UseVisualStyleBackColor = true;
+            this.BtnMR.Click += new System.EventHandler(this.BtnMR_Click);
+            // 
+            // BtnMadd
+            // 
+            this.BtnMadd.Location = new System.Drawing.Point(141, 109);
+            this.BtnMadd.Name = "BtnMadd";
+            this.BtnMadd.Size = new System.Drawing.Size(46, 39);
+            this.BtnMadd.TabIndex = 21;
+            this.BtnMadd.Text = "M+";
+            this.BtnMadd.UseVisualStyleBackColor = true;
+            this.BtnMadd.Click += new System.EventHandler(this.BtnMadd_Click);
+            // 
+            // BtnMsub
+            // 
+            this.BtnMsub.Location = new System.Drawing.Point(194, 109);
+            this.BtnMsub.Name = "BtnMsub";
+            this.BtnMsub.Size = new System.Drawing.Size(46, 39);
+            this.BtnMsub.TabIndex = 22;
+            this.BtnMsub.Text = "M-";
+            this.BtnMsub.UseVisualStyleBackColor = true;
+            this.BtnMsub.Click += new System.EventHandler(this.BtnMsub_Click);
+            // 
+            // BtnMC
+            // 
+            this.BtnMC.Location = new System.Drawing.Point(247, 109);
+            this.BtnMC.Name = "BtnMC";
+            this.BtnMC.Size = new System.Drawing.Size(50, 39);
+            this.BtnMC.TabIndex = 23;
+            this.BtnMC.Text = "MC";
+            this.BtnMC.UseVisualStyleBackColor = true;
+            this.BtnMC.Click += new System.EventHandler(this.BtnMC_Click);
+            // 
+            // memoryBox
+            // 
+            this.memoryBox.Location = new System.Drawing.Point(36, 62);
+            this.memoryBox.Name = "memoryBox";
+            this.memoryBox.Size = new System.Drawing.Size(45, 19);
+            this.memoryBox.TabIndex = 24;
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 427);
+            this.Controls.Add(this.memoryBox);
+            this.Controls.Add(this.BtnMC);
+            this.Controls.Add(this.BtnMsub);
+            this.Controls.Add(this.BtnMadd);
+            this.Controls.Add(this.BtnMR);
             this.Controls.Add(this.kigouBox);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.BtnClear);
@@ -287,6 +344,11 @@
         private System.Windows.Forms.Button BtnClear;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.TextBox kigouBox;
+        private System.Windows.Forms.Button BtnMR;
+        private System.Windows.Forms.Button BtnMadd;
+        private System.Windows.Forms.Button BtnMsub;
+        private System.Windows.Forms.Button BtnMC;
+        private System.Windows.Forms.TextBox memoryBox;
     }
 }
 
