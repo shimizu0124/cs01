@@ -188,7 +188,6 @@ namespace calculator
             //memoryBtnの押下直後
             else if (opeFlg == true & mFlag == true)
             {
-                storeCalcNum();
                 textBox.Text = x.ToString();
                 mFlag = false;
             }
@@ -352,7 +351,11 @@ namespace calculator
         {
             if(memoryBox.Text == "M")
             {
-                storeCalcNum();
+                if (opeFlg == false)
+                {
+                    storeCalcNum();
+                }
+
                 textBox.Text = memory.ToString();
                 mFlag = true;
             }
@@ -389,9 +392,12 @@ namespace calculator
         /// <param name="e"></param>
         private void BtnMC_Click(object sender, EventArgs e)
         {
-            memoryBox.Text = string.Empty;
-            memory = 0;
-            mFlag = true;
+            if(memoryBox.Text == "M")
+            {
+                memoryBox.Text = string.Empty;
+                memory = 0;
+                mFlag = true;
+            }
         }
     }
 }
